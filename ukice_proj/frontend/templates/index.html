@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gritly</title>
+        <link rel="stylesheet" href="{{STATIC_URL}}/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{{STATIC_URL}}/css/mapcident.css">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}/js/ajaxcsrf.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}/js/poplight.js"></script>
+        <script type="text/javascript" src="{{STATIC_URL}}/js/maps.js"></script>
+        <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+        <script type="text/javascript">
+        $(document).ready(function(){
+            poplight();
+            setmap(document.getElementById("maps_location"));
+        });
+        </script>
+    </head>
+    <body>
+        <header class="topbar">
+            <div class="fill">
+                <div class="container">
+                    <a class="brand" href="#" >Gritly</a>
+                    <ul class="nav">
+                        <li><a href="#?w=400" rel="about" class="poplight">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <!-- <div class="container"> -->
+            <div id="maps_location">
+            </div>
+        <!-- </div> -->
+        <div class="container">
+            <div id="info">
+                <div class="incident">
+                Tweet using the hashtag '#ukfreeze' to let others know of hazards on the roads in your area. Click on the circle icons to see information about past weather-related incidents, or the twitter birds for related tweets.
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container" id="footer">
+                <a href="http://twitter.com/share" class="twitter-share-button sharing"
+                data-url="http://gritly.nomovingparts.net"
+                data-text="Find out which roads to avoid in winter weather: Gritly. By @voxmjw, @whitehankey, & @martinjc."
+                data-related="voxmjw:database whipper"
+                data-related="martinjc:frontend desperation"
+                data-related="whitehankey:twitter extraction"
+                data-count="horizontal">Tweet</a>
+            </div>
+        </footer>
+    <div id="about" class="popup_block">
+        <h2>About</h2>
+        <p>Gritly was put together in under 12 hours by <a href="https://twitter.com/intent/user?screen_name=voxmjw">@voxmjw</a>, <a href="https://twitter.com/intent/user?screen_name=whitehankey">@whitehankey</a> and <a href="https://twitter.com/intent/user?screen_name=martinjc">@martinjc</a> at the <a href="https://twitter.com/intent/user?screen_name=boxuk">@boxuk</a> "For the Social Good" <a href="https://twitter.com/intent/user?screen_name=boxuk_hack">hackday</a>. <br/>
+        Data comes from the data.gov.uk dataset on <a href="http://data.gov.uk/dataset/road-accidents-safety-data">road accidents from 2005 to 2010</a>. </p>
+    </div>
+    </body>
+</html>
