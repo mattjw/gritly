@@ -1,0 +1,19 @@
+CONCEPT
+
+Which roads in the UK are prone to accidents due to winter weather? Gritly is a simple Google Maps mashup that displays the locations of road traffic accidents where conditions were icy or snowy. Data is taken from the UK government Road Accidents and Safety dataset, freely available at http://data.gov.uk/dataset/road-accidents-safety-data.
+Gritly also takes live information on road hazards and incidents from Twitter. Tweets in the form "#ukfreeze POSTCODE DESCRIPTION" are displayed at the corresponding location on the map.
+
+
+OPERATION
+
+Requires a SQLite3 database file containing a Road Accidents and Safety dataset. The dataset (in CSV format) can be found at http://data.gov.uk/dataset/road-accidents-safety-data . An example database file (datasets_db.db) is provided to indicate the expected schema. All fields present in the CSV files are in the database schema, with the addition of a 'datetime' for the combined date and time.
+
+Required packages: tweepy, geopy.
+
+
+BEHIND THE SCENES
+
+Built in under 10 hours at the November 2011 Box UK "For the social good" Hack Day (http://www.boxuk.com/) by:
+Mark Greenwood (@whitehankey)
+Martin Chorley (@martinjc)
+Matt Williams (@voxmjw)
